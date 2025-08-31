@@ -8,8 +8,8 @@ from email.mime.text import MIMEText
 sender_email = "daydream.casablanca@gmail.com"
 app_password = os.environ['GMAIL_APP_PASSWORD']
 
-def sendEmail(receiver_email, subject):
-    message = MIMEText("Hello, this is a test from the hackathon.")
+def sendEmail(receiver_email, subject, body):
+    message = MIMEText(body)
     message["Subject"] = subject
     message["From"] = sender_email
     message["To"] = receiver_email
@@ -18,13 +18,6 @@ def sendEmail(receiver_email, subject):
         server.starttls()
         server.login(sender_email, app_password)
         server.send_message(message)
-
-# TEST
-sendEmail(
-    "aminesakoute288@gmail.com",
-    subject="Hello from Hackathon Manager",
-    body="Hi there, biatch."
-)
 
 # Getting necessary info from the API
 api = Api(os.environ['AIRTABLE_TEST_API_KEY'])
@@ -45,4 +38,12 @@ for table in daydream_table.iterate():
         except:
             signed = False
         if signed is False:
-            pass
+            sendEmail(receiver_email=email, subject="URGENT - You haven't signed the NDA to participate in Daydream Casablanca !", body=f"""Hi there {fullname} ! 
+                      Hope you're doing great. Just a friendly reminder to sign the NDA in the Hackclub form. If you don't, then you won't be able to participate to the evenement, and that would be sad. 
+                      Best regards, Amine Sakoute | Organizer @Daydream Casablanca 2025.
+
+                      CLICK on the attachment below !""")
+        else:
+            sendEmail(receiver_email=email, subject="IMPROTANT - Click here to get your ticket !", body=f"""Hi there {fullname} ! 
+                      Hope you're doing great. Present the QR code below at Ecole Centrale's entrance to get in and participate in Daydream Casablanca 2025 ! Looking forward to seeing you there !
+                      Best regards, Amine Sakoute | Organizer @Daydream Casablanca 2025.""")
