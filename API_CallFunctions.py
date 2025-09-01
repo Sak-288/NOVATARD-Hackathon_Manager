@@ -42,49 +42,99 @@ Hope you're doing great. Present the QR code below at Ecole Centrale's entrance 
 Best regards, Amine Sakoute | Organizer @Daydream Casablanca 2025."""}
 
 html_bodies={'NOT_SIGNED':"""
-             <!DOCTYPE html>
-             <html lang="en">
-             <head>
-             <meta charset='utf-8'>
-             </head>
-             <style>
-             body {
-             background-color:lightgreen;
-             color:black;
-             font-family:'Helvetica', sans-serif;
-             font-size:20px;
-             }
-             </style>
-             <body>
-             <div id="main_div">
-             <h1>Hello Bitch !</h1>
-             <p>SIGN THE FUCKING NDA !</p>
-             <img src="https://i.abcnewsfe.com/a/ffe8d7cb-a13f-4e4e-a45b-0b16f5731915/baby-4-ht-jt-240523_1716503358143_hpEmbed_3x2.jpg">
-             </div>
-             </body>
-             </html>""",
-             'SIGNED_NDA':"""
-             <!DOCTYPE html>
-             <html lang="en">
-             <head>
-             <meta charset='utf-8'>
-             </head>
-             <body>
-             <style>
-             body {
-             background-color:lightgreen;
-             color:black;
-             font-family:'Helvetica', sans-serif;
-             font-size:20px;
-             }
-             </style>
-             <div id="main_div">
-             <h1>Hello Bitch !</h1>
-             <p>CONGRATULATIONS</p>
-             <img src="https://i.pinimg.com/736x/6f/23/67/6f236786f6706f6d978b4de83aa769a5.jpg">
-             </div>
-             </body>
-             </html>"""}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body style="margin:0; padding:0;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#90EE90">
+      <tr>
+        <td align="center" style="padding:20px; font-family:Arial, sans-serif; color:#000000; font-size:18px;">
+          <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="border-radius:8px; padding:20px;">
+            <tr>
+              <td align="center" style="font-size:28px; font-weight:bold; padding-bottom:10px;">
+                Hello!
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="font-size:20px; padding-bottom:20px;">
+                Please sign the NDA to participate in Daydream Casablanca 2025.
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <img src="https://i.abcnewsfe.com/a/ffe8d7cb-a13f-4e4e-a45b-0b16f5731915/baby-4-ht-jt-240523_1716503358143_hpEmbed_3x2.jpg" width="300" style="display:block; border:0; outline:none; text-decoration:none;">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="font-size:16px; color:#555555; line-height:22px;">
+                <strong>Amine Sakoute</strong><br>
+                Organizer @ Daydream Casablanca 2025<br>
+                <a href="https://daydream.hackclub.com" style="color:#1155CC; text-decoration:none;">daydream.hackclub.com</a><br>
+                t: +212 775-116598<br>
+                e: <a href="mailto:daydream.casablanca@gmail.com" style="color:#1155CC; text-decoration:none;">daydream.casablanca@gmail.com</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding-top:20px; font-size:14px; color:#777777;">
+                Daydream Casablanca is fiscally sponsored by <a href="https://the.hackfoundation.org" style="color:#1155CC; text-decoration:none;"><b>The Hack Foundation</b></a> (Hack Club), a 501(c)(3) nonprofit.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+""",
+'SIGNED_NDA':"""
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body style="margin:0; padding:0;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#90EE90">
+      <tr>
+        <td align="center" style="padding:20px; font-family:Arial, sans-serif; color:#000000; font-size:18px;">
+          <table width="600" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" style="border-radius:8px; padding:20px;">
+            <tr>
+              <td align="center" style="font-size:28px; font-weight:bold; padding-bottom:10px;">
+                Congratulations!
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="font-size:20px; padding-bottom:20px;">
+                Show this QR code at the entrance to get in:
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding-bottom:20px;">
+                <img src="https://i.pinimg.com/736x/6f/23/67/6f236786f6706f6d978b4de83aa769a5.jpg" width="300" style="display:block; border:0; outline:none; text-decoration:none;">
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="font-size:16px; color:#555555; line-height:22px;">
+                <strong>Amine Sakoute</strong><br>
+                Organizer @ Daydream Casablanca 2025<br>
+                <a href="https://daydream.hackclub.com" style="color:#1155CC; text-decoration:none;">daydream.hackclub.com</a><br>
+                t: +212 775-116598<br>
+                e: <a href="mailto:daydream.casablanca@gmail.com" style="color:#1155CC; text-decoration:none;">daydream.casablanca@gmail.com</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" style="padding-top:20px; font-size:14px; color:#777777;">
+                Daydream Casablanca is fiscally sponsored by <a href="https://the.hackfoundation.org" style="color:#1155CC; text-decoration:none;"><b>The Hack Foundation</b></a> (Hack Club), a 501(c)(3) nonprofit.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+"""}
 
 # Iterating over each participant && checking if they've signed the NDA
 for table in daydream_table.iterate():
