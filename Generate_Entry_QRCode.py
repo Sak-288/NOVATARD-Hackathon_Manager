@@ -1,6 +1,7 @@
 # Basic Copy-Pasted Script to genereate QR Code and Save it as a PNG
-def generate_qrcode(url, image_name):
+def generate_qrcode(url, id):
     import qrcode
+    import dropbox # To store qrcodes
 
     # Data to encode in the QR code
     data = url
@@ -19,19 +20,12 @@ def generate_qrcode(url, image_name):
 
     # Create an image from the QR code instance
     img = qr.make_image(fill_color="black", back_color="white")
+    img.save(f'prt-{id}.png')
 
-    # Save the image
-    img.save(f"{image_name}.png")
+    return img
 
 # Script to generate specific url to each pariticpant
 from Airtable_API_GetData import *
 
 # Defining known CONSTANTS
 WB_PUBLIC_URL = 'www.youtube.com'
-
-# Iterating through each participant
-for table in daydream_table.iterate():
-    for prt in table:
-        prt_id = prt['fields']['Id']
-        url = WB_PUBLIC_URL + f'/?id={prt_id}'
-        generate_qrcode(WB_PUBLIC_URL, str(prt_id))

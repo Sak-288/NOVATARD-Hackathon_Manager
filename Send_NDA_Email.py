@@ -1,8 +1,10 @@
-# Email Stuff Preparation
+# Email Stuff Preparation && other necessary imports
+import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from Airtable_API_GetData import *
+from Generate_Entry_QRCode import *
 
 sender_email = "daydream.casablanca@gmail.com"
 app_password = os.environ['GMAIL_APP_PASSWORD']
@@ -28,6 +30,10 @@ for table in daydream_table.iterate():
         # Getting their info
         fullname = participant['fields']['Name'] + " " + participant['fields']['Surname']
         email = participant['fields']['Email']
+        particpant_id = participant['fields']['Id'] # QR Code Stuff
+        participant_url = WB_PUBLIC_URL + f'/?id={particpant_id}'
+        generate_qrcode(participant_url, particpant_id)
+
         # Initializing every email_content, I know there's a better solution somewhere, just testing for the sake of personalization
         plain_bodies={'NOT_SIGNED':f"""Hi there {fullname}!
 Hope you're doing great. Just a friendly reminder to sign the NDA in the Hackclub form. If you don't, then you won't be able to participate to the evenement, and that would be sad. 
@@ -68,11 +74,13 @@ CLICK on the LINK (rhyme) below --></pre>
 Hope you're doing great.
 Present the QR code below at Ecole Centrale's entrance to get in and participate in Daydream Casablanca 2025 !
 Looking forward to seeing you there.</pre>
+            <br/>
+            <img style="width:50px;height:auto;" src="prt-{participant_id}.png">
              </div>
              <br/>
              <div dir="ltr" style="font-size:13px;font-family:'Helvetica', sans-serif;font-weight:bold;"><font>Best regards, </font><a href="https://github.com/Sak-288" style="color:rgb(17,85,204)" target="_blank"><font color="#a64d79">Amine Sakoute</font></a><div style="color:rgb(34,34,34)">Organizer @Daydream Casablanca && NOVATARD FTC#24950 Lead Coder</div><div style="color:rgb(34,34,34)"><a href="https://4f9eb20f.streaklinks.com/CkB8OkIqKmF1XgZXCQmn-rol/https%3A%2F%2Fdaydream.hackclub.com%2F" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://4f9eb20f.streaklinks.com/CkB8OkIqKmF1XgZXCQmn-rol/https%253A%252F%252Fdaydream.hackclub.com%252F&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw06bzM06NOrFiUX3kfynhWJ"><img width="420" height="137" src="https://ci3.googleusercontent.com/mail-sig/AIorK4xwFXn300c83xshdSN00Wp9yWgz72n1P31GBqb_hJACa3Oqv01nxuZIXHogMNLwmbGQDiqGVY3qC33n" alt="https://daydream.hackclub.com/" class="CToWUd" data-bit="iit"><br></a></div><div style="color:rgb(34,34,34)"><br></div><div style="color:rgb(34,34,34)">W:&nbsp;<a href="https://daydream.hackclub.com/" style="color:rgb(17,85,204)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://daydream.hackclub.com/&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw1M_5uncUUx0PQtwAcPLWCt"><font color="#a64d79">daydream.hackclub.com</font></a><br></div><div><div style="color:rgb(34,34,34)">T: +212 625734075</div><div><font color="#222222">E:&nbsp;</font><a href="mailto:hafsaelidrissi2009@gmail.com" target="_blank"><font color="#a64d79">daydream.casablanca@gmail.<wbr>com</font></a></div></div><div style="color:rgb(34,34,34)"><br></div><div style="color:rgb(34,34,34)"><font color="#444444">Daydream Casablanca is fiscally sponsored by&nbsp;</font><a href="https://4f9eb20f.streaklinks.com/CkB8OkIc3H0D0h2QUAH8ob-3/https%3A%2F%2Fthe.hackfoundation.org%2F" style="color:rgb(17,85,204)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://4f9eb20f.streaklinks.com/CkB8OkIc3H0D0h2QUAH8ob-3/https%253A%252F%252Fthe.hackfoundation.org%252F&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw0dHSwgsHXuInPMoi11akdb"><font color="#a64d79"><b>The Hack Foundation</b></font></a><font color="#444444">&nbsp;(d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</font></div></div>
              </body>
-             </html>""".format(fullname=fullname)}
+             </html>""".format(fullname=fullname, participant_id=particpant_id)}
         try:
             signed = participant['fields']['Signed']
             # If checkbox is not ticked --> NULL, so...
