@@ -47,8 +47,8 @@ html_bodies={'NOT_SIGNED':"""
              <head>
              <meta charset='utf-8'>
              </head>
-             <body style="background-color:lightgreen; color:black;">
-             <div id="main_div">
+             <body>
+             <div id="main_div" style="background-image:repeating-radial-gradient(farthest-side at 0% 0%, #c0e5fb, #fbecc6, #e79ec4);; color:black; font-family:'Helvetica', sans-serif; font-size:20px;border-radius:5px;">
              <h1>Hello Bitch !</h1>
              <p>SIGN THE FUCKING NDA !</p>
              <img src="https://i.abcnewsfe.com/a/ffe8d7cb-a13f-4e4e-a45b-0b16f5731915/baby-4-ht-jt-240523_1716503358143_hpEmbed_3x2.jpg">
@@ -62,8 +62,8 @@ html_bodies={'NOT_SIGNED':"""
              <head>
              <meta charset='utf-8'>
              </head>
-             <body style="background-color:lightgreen; color:black;">
-             <div id="main_div">
+             <body>
+             <div id="main_div" style="background-image:repeating-radial-gradient(farthest-side at 0% 0%, #c0e5fb, #fbecc6, #e79ec4);; color:black; font-family:'Helvetica', sans-serif; font-size:20px;border-radius:5px;">
              <h1>Hello Bitch !</h1>
              <p>CONGRATULATIONS</p>
              <img src="https://i.pinimg.com/736x/6f/23/67/6f236786f6706f6d978b4de83aa769a5.jpg">
