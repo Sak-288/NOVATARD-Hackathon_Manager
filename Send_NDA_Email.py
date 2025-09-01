@@ -1,11 +1,8 @@
-# Importing OS (to retrieve env variables) && pyairtable (a community-built python library to use the Airtable API)
-import os
-from pyairtable import Api
-
 # Email Stuff Preparation
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from Airtable_API_GetData import *
 
 sender_email = "daydream.casablanca@gmail.com"
 app_password = os.environ['GMAIL_APP_PASSWORD']
@@ -24,14 +21,6 @@ def sendEmail(receiver_email, subject, plain, html):
         server.starttls()
         server.login(sender_email, app_password)
         server.send_message(message)
-
-# Getting necessary info from the API
-api = Api(os.environ['AIRTABLE_TEST_API_KEY'])
-BASE_ID = "app5RiAfXsKWSZ67p"
-TABLE_ID = "tblt7GgXQ6gCYCV2l"
-
-# Declaring the Participants Spreadsheet
-daydream_table = api.table(BASE_ID, TABLE_ID)
 
 # Iterating over each participant && checking if they've signed the NDA
 for table in daydream_table.iterate():
