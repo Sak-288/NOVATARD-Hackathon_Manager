@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 from Airtable_API_GetData import *
 from Generate_Entry_QRCode import *
 
-sender_email = "daydream.casablanca@gmail.com"
+sender_email = "casablanca@daydream.hackclub.com"
 app_password = os.environ['GMAIL_APP_PASSWORD']
 
 def sendEmail(receiver_email, subject, plain, html):
