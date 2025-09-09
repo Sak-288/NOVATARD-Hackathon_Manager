@@ -50,17 +50,19 @@ Best regards, Amine Sakoute | Organizer @Daydream Casablanca 2025.""".format(ful
              <meta charset='utf-8'>
              </head>
              <body>
-            <div id="main_div" style="text-align:center;background:radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top left,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top right,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom left,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom right;background-size:50% 50%;background-repeat:no-repeat;color:black;font-family:'Helvetica',sans-serif;font-size:13px;border-radius:5px;margin:0;width:auto;min-height: calc(100% + 130px);">
+             <div id="main_div" style="text-align:center;background:#fbecc6 radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top left/50% 50% no-repeat,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top right/50% 50% no-repeat,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom left/50% 50% no-repeat,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom right/50% 50% no-repeat;color:black;font-family:'Helvetica',sans-serif;font-size:13px;border-radius:5px;margin:0;width:auto;min-height: calc(100% + 130px);">
              <h1 style="text-decoration:underlined">Hi there {fullname} !</h1>
             <pre style="white-space:pre-wrap; word-wrap:break-word; display:inline-block; width:60%; text-align:center; margin:0 auto;">
 Hope you're doing great.
 Just a friendly reminder to sign the NDA in the Hackclub form. If you don't, then you won't be able to participate to the evenement, and that would be sad.
 CLICK on the LINK (rhyme) below --></pre>
+                     <br/>
+                     <img id="accessQr" style="height:auto; width:auto; border-radius:2px;" src={prt_accessCode}>
              </div>
             <br/>
              <div dir="ltr" style="font-size:13px;font-family:'Helvetica', sans-serif;font-weight:bold;"><font>Best regards, </font><a href="https://github.com/Sak-288" style="color:rgb(17,85,204)" target="_blank"><font color="#a64d79">Amine Sakoute</font></a><div style="color:rgb(34,34,34)">Organizer @Daydream Casablanca && NOVATARD FTC#24950 Lead Coder</div><div style="color:rgb(34,34,34)"><a href="https://4f9eb20f.streaklinks.com/CkB8OkIqKmF1XgZXCQmn-rol/https%3A%2F%2Fdaydream.hackclub.com%2F" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://4f9eb20f.streaklinks.com/CkB8OkIqKmF1XgZXCQmn-rol/https%253A%252F%252Fdaydream.hackclub.com%252F&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw06bzM06NOrFiUX3kfynhWJ"><img width="420" height="137" src="https://ci3.googleusercontent.com/mail-sig/AIorK4xwFXn300c83xshdSN00Wp9yWgz72n1P31GBqb_hJACa3Oqv01nxuZIXHogMNLwmbGQDiqGVY3qC33n" alt="https://daydream.hackclub.com/" class="CToWUd" data-bit="iit"><br></a></div><div style="color:rgb(34,34,34)"><br></div><div style="color:rgb(34,34,34)">W:&nbsp;<a href="https://daydream.hackclub.com/" style="color:rgb(17,85,204)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://daydream.hackclub.com/&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw1M_5uncUUx0PQtwAcPLWCt"><font color="#a64d79">daydream.hackclub.com</font></a><br></div><div><div style="color:rgb(34,34,34)">T: +212 625734075</div><div><font color="#222222">E:&nbsp;</font><a href="mailto:hafsaelidrissi2009@gmail.com" target="_blank"><font color="#a64d79">daydream.casablanca@gmail.<wbr>com</font></a></div></div><div style="color:rgb(34,34,34)"><br></div><div style="color:rgb(34,34,34)"><font color="#444444">Daydream Casablanca is fiscally sponsored by&nbsp;</font><a href="https://4f9eb20f.streaklinks.com/CkB8OkIc3H0D0h2QUAH8ob-3/https%3A%2F%2Fthe.hackfoundation.org%2F" style="color:rgb(17,85,204)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://4f9eb20f.streaklinks.com/CkB8OkIc3H0D0h2QUAH8ob-3/https%253A%252F%252Fthe.hackfoundation.org%252F&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw0dHSwgsHXuInPMoi11akdb"><font color="#a64d79"><b>The Hack Foundation</b></font></a><font color="#444444">&nbsp;(d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</font></div></div>
              </body>
-             </html>""".format(fullname=fullname),
+             </html>""".format(fullname=fullname, prt_accessCode=prt_accessCode),
              'SIGNED_NDA':"""
              <!DOCTYPE html>
              <html lang="en">
@@ -68,17 +70,19 @@ CLICK on the LINK (rhyme) below --></pre>
              <meta charset='utf-8'>
              </head>
              <body>
-             <div id="main_div" style="text-align:center;background:radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top left,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top right,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom left,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom right;background-size:50% 50%;background-repeat:no-repeat;color:black;font-family:'Helvetica',sans-serif;font-size:13px;border-radius:5px;margin:0;width:auto;min-height: calc(100% + 130px);">
+             <div id="main_div" style="text-align:center;background:#fbecc6 radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top left/50% 50% no-repeat,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) top right/50% 50% no-repeat,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom left/50% 50% no-repeat,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 25%,#e79ec4 50%) bottom right/50% 50% no-repeat;color:black;font-family:'Helvetica',sans-serif;font-size:13px;border-radius:5px;margin:0;width:auto;min-height: calc(100% + 130px);">
              <h1 style="text-decoration:underlined">Hi there {fullname} !</h1>
             <pre style="white-space:pre-wrap; word-wrap:break-word; display:inline-block; width:60%; text-align:center; margin:0 auto;">
 Hope you're doing great.
 Present the QR code below at Ecole Centrale's entrance to get in and participate in Daydream Casablanca 2025 !
 Looking forward to seeing you there.</pre>
+                     <br/>
+                     <img id="accessQr" style="height:auto; width:auto; border-radius:2px;" src={prt_accessCode}>
              </div>
              <br/>
              <div dir="ltr" style="font-size:13px;font-family:'Helvetica', sans-serif;font-weight:bold;"><font>Best regards, </font><a href="https://github.com/Sak-288" style="color:rgb(17,85,204)" target="_blank"><font color="#a64d79">Amine Sakoute</font></a><div style="color:rgb(34,34,34)">Organizer @Daydream Casablanca && NOVATARD FTC#24950 Lead Coder</div><div style="color:rgb(34,34,34)"><a href="https://4f9eb20f.streaklinks.com/CkB8OkIqKmF1XgZXCQmn-rol/https%3A%2F%2Fdaydream.hackclub.com%2F" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://4f9eb20f.streaklinks.com/CkB8OkIqKmF1XgZXCQmn-rol/https%253A%252F%252Fdaydream.hackclub.com%252F&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw06bzM06NOrFiUX3kfynhWJ"><img width="420" height="137" src="https://ci3.googleusercontent.com/mail-sig/AIorK4xwFXn300c83xshdSN00Wp9yWgz72n1P31GBqb_hJACa3Oqv01nxuZIXHogMNLwmbGQDiqGVY3qC33n" alt="https://daydream.hackclub.com/" class="CToWUd" data-bit="iit"><br></a></div><div style="color:rgb(34,34,34)"><br></div><div style="color:rgb(34,34,34)">W:&nbsp;<a href="https://daydream.hackclub.com/" style="color:rgb(17,85,204)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://daydream.hackclub.com/&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw1M_5uncUUx0PQtwAcPLWCt"><font color="#a64d79">daydream.hackclub.com</font></a><br></div><div><div style="color:rgb(34,34,34)">T: +212 625734075</div><div><font color="#222222">E:&nbsp;</font><a href="mailto:hafsaelidrissi2009@gmail.com" target="_blank"><font color="#a64d79">daydream.casablanca@gmail.<wbr>com</font></a></div></div><div style="color:rgb(34,34,34)"><br></div><div style="color:rgb(34,34,34)"><font color="#444444">Daydream Casablanca is fiscally sponsored by&nbsp;</font><a href="https://4f9eb20f.streaklinks.com/CkB8OkIc3H0D0h2QUAH8ob-3/https%3A%2F%2Fthe.hackfoundation.org%2F" style="color:rgb(17,85,204)" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://4f9eb20f.streaklinks.com/CkB8OkIc3H0D0h2QUAH8ob-3/https%253A%252F%252Fthe.hackfoundation.org%252F&amp;source=gmail&amp;ust=1756814241116000&amp;usg=AOvVaw0dHSwgsHXuInPMoi11akdb"><font color="#a64d79"><b>The Hack Foundation</b></font></a><font color="#444444">&nbsp;(d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</font></div></div>
              </body>
-             </html>""".format(fullname=fullname)}
+             </html>""".format(fullname=fullname, prt_accessCode=prt_accessCode)}
         try:
             signed = participant['fields']['Signed']
             # If checkbox is not ticked --> NULL, so...
@@ -89,7 +93,6 @@ Looking forward to seeing you there.</pre>
             # Passing the actual email contents : Plain Text && HTML
             plain_content = MIMEText(plain_bodies['NOT_SIGNED'], "plain")
             html_content = MIMEText(html_bodies['NOT_SIGNED'], "html")
-
             sendEmail(receiver_email=email, subject="URGENT : Sign the NDA to participate in Daydream Casablanca !", plain=plain_content, html=html_content)
         else:
             # Passing the actual email contents : Plain Text && HTML
