@@ -1,10 +1,15 @@
+# Dropbox API Stuff Preparation
+
+# Defining URL CONSTANT
+WB_PUBLIC_URL = 'www.youtube.com'
+
 # Basic Copy-Pasted Script to genereate QR Code and Save it as a PNG
 def generate_qrcode(url, id):
     import qrcode
     import dropbox # To store qrcodes
 
     # Data to encode in the QR code
-    data = url
+    data = url + f"/{id}"
 
     # Create QR code instance
     qr = qrcode.QRCode(
@@ -20,12 +25,5 @@ def generate_qrcode(url, id):
 
     # Create an image from the QR code instance
     img = qr.make_image(fill_color="black", back_color="white")
-    img.save(f'prt-{id}.png')
 
     return img
-
-# Script to generate specific url to each pariticpant
-from Airtable_API_GetData import *
-
-# Defining known CONSTANTS
-WB_PUBLIC_URL = 'www.youtube.com'

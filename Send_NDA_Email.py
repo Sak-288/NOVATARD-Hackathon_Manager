@@ -4,7 +4,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from Airtable_API_GetData import *
 
-sender_email = "daydream.casablanca@gmail.com"
+# QR Code Stuff Preparation
+from Generate_Entry_QRCode import *
+
+sender_email = "casablanca@daydream.hackclub.com"
 app_password = os.environ['GMAIL_APP_PASSWORD']
 
 def sendEmail(receiver_email, subject, plain, html):
@@ -28,6 +31,9 @@ for table in daydream_table.iterate():
         # Getting their info
         fullname = participant['fields']['Name'] + " " + participant['fields']['Surname']
         email = participant['fields']['Email']
+        # QR Code Stuff
+        prt_id = participant['fields']['Id']
+        prt_accessCode = generate_qrcode(WB_PUBLIC_URL, prt_id)
         # Initializing every email_content, I know there's a better solution somewhere, just testing for the sake of personalization
         plain_bodies={'NOT_SIGNED':f"""Hi there {fullname}!
 Hope you're doing great. Just a friendly reminder to sign the NDA in the Hackclub form. If you don't, then you won't be able to participate to the evenement, and that would be sad. 
@@ -90,3 +96,4 @@ Looking forward to seeing you there.</pre>
             plain_content = MIMEText(plain_bodies['SIGNED_NDA'], "plain")
             html_content = MIMEText(html_bodies['SIGNED_NDA'], "html")
             sendEmail(receiver_email=email, subject="IMPROTANT - Click here to get your ticket !",  plain=plain_content, html=html_content)
+        
