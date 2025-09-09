@@ -46,6 +46,9 @@ def generate_qrcode(url, id):
         with open(qrName, "rb") as f:
             dbx.files_upload(f.read(), qrPath, mode=dropbox.files.WriteMode("overwrite"))
 
+        # Deleting all the qrCodes from my PC
+        os.remove(qrName)
+
         # Getting link AFTER writing the file
         link_metadata = dbx.sharing_create_shared_link_with_settings(qrPath)
         qrDb_link = link_metadata.url
