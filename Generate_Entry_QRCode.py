@@ -21,7 +21,7 @@ def generate_qrcode(url, id):
     if qrName in fileNames:
         # Getting LINK already because file ALREADY EXISTS
         links = dbx.sharing_list_shared_links(path=qrPath, direct_only=True)
-        qrDb_link = links.links[0].url
+        qrDb_link = str(links.links[0].url).replace("dl=0", "raw=1")
         return qrDb_link
     else:
         # Data to encode in the QR code
@@ -51,6 +51,6 @@ def generate_qrcode(url, id):
 
         # Getting link AFTER writing the file
         link_metadata = dbx.sharing_create_shared_link_with_settings(qrPath)
-        qrDb_link = link_metadata.url
+        qrDb_link = str(link_metadata.url).replace("dl=0", "raw=1")
 
         return qrDb_link
