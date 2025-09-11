@@ -6,10 +6,29 @@ def generate_qrcode(url, id):
     # Dropbox API Stuff Preparation + QR Code Stuff Preparation
     import qrcode
     import dropbox
+    import requests
     import os
 
     # Dropbox API Vars && Constants
-    DB_ACCESS_TOKEN = os.environ["DROPBOX_ACCESS_TOKEN"]
+    DB_APP_KEY = "mhxephqflq0t6un"
+    DB_APP_SECRET = "emqxv94p9d86a7n"
+    DB_REFRESH_TOKEN = os.environ["DROPBOX_ACCESS_TOKEN"]
+
+    # Exchanging REFRESH TOKEN --> ACCESS TOKEN
+    def get_access_token():
+        url = "https://api.dropbox.com/oauth2/token"
+        data = {
+            "grant_type": "refresh_token",
+            "refresh_token": DB_REFRESH_TOKEN,
+        }
+        # Basic auth with App Key and Secret
+        response = requests.post(url, data=data, auth=(DB_APP_KEY, DB_APP_SECRET))
+        response.raise_for_status()
+        token_info = response.json()
+        return token_info["access_token"]
+
+    # Getting Access Token
+    DB_ACCESS_TOKEN = get_access_token()
     qrName = f"prt-{id}.png"
     qrPath = f"/prt-{id}.png"
     # Setting Up
