@@ -10,8 +10,8 @@ AIRTABLE_API_KEY = os.environ.get("AIRTABLE_TEST_API_KEY")
 HTML_PARTICIPANT = """
 <!DOCTYPE html>
 <html>
-<head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Participant Info</title><link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/9tyxp466h915yhionvuxw/cat.ico?rlkey=tsxs01aqis0fs5nz8o0wtv7dx&e=2&st=66xk2y9t&raw=1"></head>
-<body style="position:relative;text-align:center;font-weight:bold;color:black;align-items:flex-start; justify-content:space-between; background:radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 100%) top left,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 100%) top right,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 100%) bottom left,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 100%) bottom right; background-repeat:repeat; color:black; font-family:'Helvetica',sans-serif; font-size:16px;">
+<head>  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Participant Info</title><link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/9tyxp466h915yhionvuxw/cat.ico?rlkey=tsxs01aqis0fs5nz8o0wtv7dx&e=2&st=66xk2y9t&raw=1"></head>
+<body style="position:relative;text-align:center;font-weight:bold;color:black;align-items:flex-start; justify-content:space-between; background:radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 100%) top left,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 100%) top right,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 100%) bottom left,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 100%) bottom right; background-repeat:repeat; color:black; font-family:'Orbitron',sans-serif; font-size:16px;">
 <h1 style="text-decoration:underline;">Participant Info</h1>
 {% if info %}
 <div id="info_div" style="margin-top:13px;position:absolute;left:50%; transform:translate(-50%, 0%); width:30%; height:auto; background-color:white; border-radius:5px;">
@@ -32,6 +32,7 @@ HTML_ADMIN = """
 <!DOCTYPE html>
 <html>
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <title>Admin Page</title>
     <link rel="icon" type="image/png" href="https://www.dropbox.com/s/abcd1234/cat.ico?raw=1">
@@ -45,10 +46,13 @@ HTML_ADMIN = """
             background-repeat: repeat;
             background-position: center;
             position: relative;
+            font-weight:bold;
+            background-color:black;
         }
 
         #cmd_div {
-            position: sticky;
+            background-color:darkgreen;
+            position: absolute;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
@@ -66,13 +70,18 @@ HTML_ADMIN = """
             font-size: 18px;
             margin: 10px 0;
             cursor: pointer;
+            font-weight:bold;
+            background-color:blue;
+            color:white;
         }
 
         #ifr_div {
+        background-color:darkgreen;
             margin-top: 40px;
             width: 100%;
             padding: 0 5%;
             box-sizing: border-box;
+            color:white;
         }
 
         #ifr_div h2 {
@@ -82,6 +91,7 @@ HTML_ADMIN = """
         }
 
         #ifr_div iframe {
+        # background-color:darkgreen;
             width: 100%;
             min-height: 533px;
             border: 1px solid #ccc;
