@@ -52,8 +52,8 @@ HTML_ADMIN = """
         }
 
         #cmd_div {
-            background-color:darkgreen;
             position: absolute;
+            margin-bottom:50px;
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
@@ -77,7 +77,6 @@ HTML_ADMIN = """
         }
 
         #ifr_div {
-        background-color:darkgreen;
             margin-top: 40px;
             width: 100%;
             padding: 0 5%;
@@ -92,7 +91,6 @@ HTML_ADMIN = """
         }
 
         #ifr_div iframe {
-        # background-color:darkgreen;
             width: 100%;
             min-height: 533px;
             border: 1px solid #ccc;
