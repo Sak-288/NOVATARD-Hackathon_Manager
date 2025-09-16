@@ -1,5 +1,5 @@
 # Defining URL CONSTANT
-WB_PUBLIC_URL = 'www.youtube.com'
+WB_PUBLIC_URL = 'https://novatard-hackathon-flask-production.up.railway.app'
 
 # Basic Copy-Pasted Script to genereate QR Code and Save it as a PNG
 def generate_qrcode(url, id):
