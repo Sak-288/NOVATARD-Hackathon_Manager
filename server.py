@@ -4,7 +4,7 @@ from Airtable_API_GetData import *
 
 app = Flask(__name__)
 
-AIRTABLE_API_KEY = os.environ["AIRTABLE_TEST_API_KEY"]
+AIRTABLE_API_KEY = os.environ.get("AIRTABLE_TEST_API_KEY")
 
 HTML_TEMPLATE = """
 <!DOCTYPE html>
@@ -53,4 +53,5 @@ def home():
     return render_template_string(HTML_TEMPLATE, info=html_data)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
