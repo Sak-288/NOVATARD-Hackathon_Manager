@@ -192,13 +192,13 @@ def admin_page():
 # Run NDA script
 @app.route("/run-nda", methods=["POST"])
 def run_nda():
-    subprocess.Popen(["python", "Send_NDA_Email.py"])
+    subprocess.Popen(["python", "Send_NDA_Email.py"], cwd=os.getcwd())
     return "", 204  # 204 = No Content
 
 # Run Ticket script
 @app.route("/run-ticket", methods=["POST"])
 def run_ticket():
-    subprocess.Popen(["python", "Send_Ticket_Email.py"])
+    subprocess.Popen(["python", "Send_QR_Email.py"], cwd=os.getcwd())
     return "", 204
 
 if __name__ == "__main__":
