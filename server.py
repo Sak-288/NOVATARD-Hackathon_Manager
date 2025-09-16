@@ -145,7 +145,7 @@ HTML_ADMIN = """
 
                 let offset_coeff = 0.005;
                 let bg_Xoffset = -(_mouseX - _w/2) * offset_coeff;
-                let bg_Yoffset = -(_mouseY - _h/2) * offset_coeff * -1.75;
+                let bg_Yoffset = -(_mouseY - _h/2) * offset_coeff;
 
                 elem.style.backgroundPosition = `${bg_Xoffset}% ${bg_Yoffset}%`;
             }
