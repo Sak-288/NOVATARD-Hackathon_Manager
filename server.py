@@ -151,7 +151,7 @@ HTML_ADMIN = """
 """
 
 
-@app.route("/")
+@app.route("/info")
 def home():
     id = request.args.get("id")
     if not id:
