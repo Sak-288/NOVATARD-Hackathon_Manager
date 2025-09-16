@@ -9,7 +9,7 @@ AIRTABLE_API_KEY = os.environ.get("AIRTABLE_TEST_API_KEY")
 HTML_TEMPLATE = """
 <!DOCTYPE html>
 <html>
-<head><title>Participant Info</title><link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/9tyxp466h915yhionvuxw/cat.ico?rlkey=tsxs01aqis0fs5nz8o0wtv7dx&e=2&st=66xk2y9t&raw=1"></head>
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Participant Info</title><link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/9tyxp466h915yhionvuxw/cat.ico?rlkey=tsxs01aqis0fs5nz8o0wtv7dx&e=2&st=66xk2y9t&raw=1"></head>
 <body style="position:relative;text-align:center;font-weight:bold;color:black;align-items:flex-start; justify-content:space-between; background:radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 100%) top left,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 100%) top right,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 100%) bottom left,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 100%) bottom right; background-repeat:repeat; color:black; font-family:'Helvetica',sans-serif; font-size:16px;">
 <h1 style="text-decoration:underline;">Participant Info</h1>
 {% if info %}
