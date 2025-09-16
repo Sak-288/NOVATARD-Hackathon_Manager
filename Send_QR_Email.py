@@ -100,10 +100,10 @@ CLICK on the LINK on the right -->
             signed = False
         # Sending the QR Code + Reminding participants to sign the NDA
         if signed is False:
-            # Passing the actual email contents : Plain Text && HTML
-            plain_content = MIMEText(plain_bodies['NOT_SIGNED'], "plain")
-            html_content = MIMEText(html_bodies['NOT_SIGNED'], "html")
-            sendEmail(receiver_email=email, subject="URGENT : Sign the NDA to participate in Daydream Casablanca !", plain=plain_content, html=html_content)
-        else:
             pass
+        else:
+            # Passing the actual email contents : Plain Text && HTML
+            plain_content = MIMEText(plain_bodies['SIGNED_NDA'], "plain")
+            html_content = MIMEText(html_bodies['SIGNED_NDA'], "html")
+            sendEmail(receiver_email=email, subject="IMPROTANT - Click here to get your ticket !",  plain=plain_content, html=html_content)
         
