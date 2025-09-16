@@ -33,6 +33,7 @@ HTML_ADMIN = """
 <html>
 <head>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://www.dropbox.com/scl/fi/9tyxp466h915yhionvuxw/cat.ico?rlkey=tsxs01aqis0fs5nz8o0wtv7dx&e=2&st=66xk2y9t&raw=1">
     <meta charset="utf-8">
     <title>Admin Page</title>
     <link rel="icon" type="image/png" href="https://www.dropbox.com/s/abcd1234/cat.ico?raw=1">
