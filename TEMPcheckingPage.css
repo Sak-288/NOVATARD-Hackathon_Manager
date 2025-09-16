@@ -1,0 +1,6 @@
+body {
+    background:radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 100%) top left,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 100%) top right,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 100%) bottom left,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 100%) bottom right; background-repeat:no-repeat;
+    font-family:"Helvetica", sans-serif;
+    font-weight:normal;
+    font-size:20px;
+}

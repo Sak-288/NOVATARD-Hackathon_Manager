@@ -44,7 +44,7 @@ def generate_qrcode(url, id):
         return qrDb_link
     else:
         # Data to encode in the QR code
-        data = url + f"/{id}"
+        data = url + f"/?id={id}"
         # Create QR code instance
         qr = qrcode.QRCode(
             version=1,  # Controls the size of the QR code (1-40)

@@ -1,0 +1,16 @@
+<!-- index.html -->
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+
+if (!id) {
+  document.getElementById("result").textContent = "No ID found in URL.";
+} else {
+  // Call backend API
+  fetch(`/api/participant?id=${id}`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("result").textContent = JSON.stringify(data);
+    });
+}
+</script>
