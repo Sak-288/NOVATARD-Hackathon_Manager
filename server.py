@@ -52,17 +52,13 @@ HTML_ADMIN = """
         }
 
         #cmd_div {
-            position: absolute;
-            margin-bottom:50px;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;       
+            margin: 20px 0 20px 5%;    
             background-color: white;
             width: 60%;
             border-radius: 3px;
             padding: 20px;
             text-align: center;
-            z-index: 10;
             color: black;
         }
 
@@ -71,9 +67,10 @@ HTML_ADMIN = """
             font-size: 18px;
             margin: 10px 0;
             cursor: pointer;
-            font-weight:bold;
-            background-color:blue;
-            color:white;
+            font-weight: bold;
+            background-color: blue;
+            color: white;
+            font-family:'Orbitron', sans-serif;
         }
 
         #ifr_div {
