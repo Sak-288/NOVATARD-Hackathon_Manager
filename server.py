@@ -13,7 +13,7 @@ HTML_TEMPLATE = """
 <body style="position:relative;text-align:center;font-weight:bold;color:black;align-items:flex-start; justify-content:space-between; background:radial-gradient(circle at top left,#c0e5fb 0%,#fbecc6 100%) top left,radial-gradient(circle at top right,#c0e5fb 0%,#fbecc6 100%) top right,radial-gradient(circle at bottom left,#c0e5fb 0%,#fbecc6 100%) bottom left,radial-gradient(circle at bottom right,#c0e5fb 0%,#fbecc6 100%) bottom right; background-repeat:repeat; color:black; font-family:'Helvetica',sans-serif; font-size:16px;">
 <h1>Participant Info</h1>
 {% if info %}
-<div id="info_div" style="position:absolute; top:15%; left:50%; transform:translate(-50%, -50%); width:calc(100% + 20px); height:calc(100% + 20px); background-color:white; border-radius:5px;"></div>
+<div id="info_div" style="position:absolute; top:15%; left:50%; transform:translate(-50%, -50%); width:calc(100% + 20px); height:calc(100% + 20px); background-color:white; border-radius:5px;">
 <p>Id : {{ info['Id'] }}</p>
 <p>Surname : {{ info['Surname'] }}</p>
 <p>Name : {{ info['Name'] }}</p>
