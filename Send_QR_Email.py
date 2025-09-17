@@ -13,23 +13,13 @@ app_password = os.environ['GMAIL_APP_PASSWORD']
 
 def sendEmail(receiver_email, subject, plain, html):
     # Outer container: HTML + inline images
-    message = MIMEMultipart("related")
+    message = MIMEMultipart("alternative")
     message["Subject"] = subject
     message["From"] = sender_email
     message["To"] = receiver_email
 
-    # Inner alternative: plain text + HTML
-    alternative = MIMEMultipart("alternative")
-    alternative.attach(plain)
-    alternative.attach(html)
-    message.attach(alternative)
-
-    # Attach QR code image to outer message
-    with open("qrcode.png", "rb") as f:
-        mime_img = MIMEImage(f.read())
-        mime_img.add_header("Content-ID", "<qrcode>")  # match with src="cid:qrcode"
-        mime_img.add_header("Content-Disposition", "inline", filename="qrcode.png")
-        message.attach(mime_img)
+    message.attach(plain)
+    message.attach(html)
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
