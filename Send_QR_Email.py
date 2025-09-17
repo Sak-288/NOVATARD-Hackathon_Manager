@@ -3,6 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from Airtable_API_GetData import *
+from email.mime.image import MIMEImage
 
 # QR Code Stuff Preparation
 from Generate_Entry_QRCode import *
@@ -11,14 +12,24 @@ sender_email = "casablanca@daydream.hackclub.com"
 app_password = os.environ['GMAIL_APP_PASSWORD']
 
 def sendEmail(receiver_email, subject, plain, html):
-    message = MIMEMultipart("alternative")
+    # Outer container: HTML + inline images
+    message = MIMEMultipart("related")
     message["Subject"] = subject
     message["From"] = sender_email
     message["To"] = receiver_email
 
-    # Trying out the two email_contents (Some email providers don't handle HTML direclty)
-    message.attach(plain_content)
-    message.attach(html_content) # They will first try this one
+    # Inner alternative: plain text + HTML
+    alternative = MIMEMultipart("alternative")
+    alternative.attach(plain)
+    alternative.attach(html)
+    message.attach(alternative)
+
+    # Attach QR code image to outer message
+    with open("qrcode.png", "rb") as f:
+        mime_img = MIMEImage(f.read())
+        mime_img.add_header("Content-ID", "<qrcode>")  # match with src="cid:qrcode"
+        mime_img.add_header("Content-Disposition", "inline", filename="qrcode.png")
+        message.attach(mime_img)
 
     with smtplib.SMTP("smtp.gmail.com", 587) as server:
         server.starttls()
@@ -84,7 +95,7 @@ CLICK on the LINK on the right -->
             </div>
             <!-- QR Code -->
             <div style="display:table-cell; width:30%; text-align:end; vertical-align:middle;">
-            <img id="accessQr" src="{prt_accessCode}" style="height:150px; width:150px; border-radius:5px; margin-right:60px;">
+            <img src="cid:qrcode" alt="QR Code" style="height:150px; width:150px; border-radius:5px; margin-right:60px"/>
             </div>
             </div>
             </div>
